@@ -220,8 +220,13 @@ CORE.Grid.prototype.getPathsRecursive = function(n, x, y, path, paths, index, mo
     } else if (x > n || y > n) {
         return;
     } else {
-        setTimeout(this.getPathsRecursive(n, x + 1, y, path, paths, index, 1), 10);
-        setTimeout(this.getPathsRecursive(n, x, y + 1, path, paths, index, 0), 10);
+        var self = this;
+        setTimeout(function() {
+            self.getPathsRecursive(n, x + 1, y, path, paths, index, 1)
+        }, 0);
+        setTimeout(function() {
+            self.getPathsRecursive(n, x, y + 1, path, paths, index, 0)
+        }, 0);
     }
 };
 

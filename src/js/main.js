@@ -66,8 +66,8 @@ CORE.initControls = function(grid) {
 
 CORE.main = function() {
     var options = {
-        width: 10,
-        height: 10
+        width: 14,
+        height: 14
     };
     CORE.showLoading(false);
 
